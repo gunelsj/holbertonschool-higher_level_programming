@@ -1,1 +1,1 @@
-Python data structures tasks
+Python list printing project
