@@ -2,7 +2,8 @@
 import sys
 
 if __name__ == "__main__":
-    args = sys.argv[1:]  # sys.argv[0] skriptin adıdır, ona görə 1-dən başlamaq lazımdır
+    args = sys.argv[1:]
+    # sys.argv[0] skriptin adıdır, ona görə 1-dən başlamaq lazımdır
     count = len(args)
 
     if count == 0:
@@ -14,3 +15,4 @@ if __name__ == "__main__":
 
     for i, arg in enumerate(args, start=1):
         print("{}: {}".format(i, arg))
+
