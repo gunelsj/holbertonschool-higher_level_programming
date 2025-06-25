@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle."""
+"""Module that defines a Rectangle class."""
+
 
 class Rectangle:
     """Class that defines a rectangle."""
@@ -10,10 +11,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """Getter for the width."""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Setter for the width with validation."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -22,10 +25,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Getter for the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Setter for the height with validation."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -33,17 +38,22 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        """Returns the area of the rectangle."""
+        return self.width * self.height
 
     def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
+        """Returns the perimeter of the rectangle."""
+        if self.width == 0 or self.height == 0:
             return 0
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
+        """Return the rectangle as string with '#' characters."""
+        if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+        return "\n".join(["#" * self.width for _ in range(self.height)])
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        """Return the string representation of the rectangle."""
+        return "Rectangle({}, {})".format(self.width, self.height)
+
