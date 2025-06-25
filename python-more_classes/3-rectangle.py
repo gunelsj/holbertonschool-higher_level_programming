@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that defines a Rectangle class."""
+"""Defines a class Rectangle."""
 
 
 class Rectangle:
@@ -11,12 +11,10 @@ class Rectangle:
 
     @property
     def width(self):
-        """Getter for the width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter for the width with validation."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -25,12 +23,10 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter for the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter for the height with validation."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -38,22 +34,14 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the area of the rectangle."""
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the perimeter of the rectangle."""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self.width + self.height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return the rectangle as string with '#' characters."""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#" * self.width for _ in range(self.height)])
-
-    def __repr__(self):
-        """Return the string representation of the rectangle."""
-        return "Rectangle({}, {})".format(self.width, self.height)
-
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
