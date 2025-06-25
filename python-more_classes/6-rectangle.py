@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """Defines a class Rectangle."""
 
-
 class Rectangle:
     """Class that defines a rectangle."""
+
     number_of_instances = 0  # Class attribute
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1  # Increment when instance is created
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1  # Decrement when instance is deleted
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
