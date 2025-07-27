@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-str1 = "object-oriented "
-str2 = "programming with "
-str3 = "Python"
-print(str1 + str2 + str3)
+word1 = "object-oriented"
+word2 = "programming"
+word3 = "with"
+word4 = "Python"
+print(" ".join([word1, word2, word3, word4]))
