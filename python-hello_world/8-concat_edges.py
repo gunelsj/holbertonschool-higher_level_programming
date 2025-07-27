@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(word[:3] + word[3:6] + word[6:])
+print(word[:18] + word[18:33] + word[33:])
